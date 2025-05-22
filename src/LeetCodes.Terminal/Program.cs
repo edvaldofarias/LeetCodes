@@ -1,5 +1,6 @@
 ﻿using LeetCodes.Terminal.HammingWeight;
 using LeetCodes.Terminal.TwoSum;
+using LeetCodes.Terminal.BackTracking;
 
 namespace LeetCodes.Terminal;
 
@@ -21,6 +22,8 @@ internal class Program
         Console.WriteLine("1. Two Sum");
         
         Console.WriteLine("2. Hamming Weight");
+        
+        Console.WriteLine("3. Backtracking");
         
         Console.WriteLine("0. Exit");
         
@@ -55,6 +58,9 @@ internal class Program
                 break;
             case 2:
                 HammingWeightSolutions.Run();
+                break;
+            case 3:
+                BackTrackingSolutions.Run();
                 break;
             default:
                 Console.WriteLine("Invalid option. Please try again.");
