@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿using LeetCodes.Terminal.HammingWeight;
 using LeetCodes.Terminal.TwoSum;
 
 namespace LeetCodes.Terminal;
@@ -21,6 +20,10 @@ internal class Program
         
         Console.WriteLine("1. Two Sum");
         
+        Console.WriteLine("2. Hamming Weight");
+        
+        Console.WriteLine("0. Exit");
+        
         Console.WriteLine("====================================");
         
         Console.WriteLine("Select an option:");
@@ -41,10 +44,17 @@ internal class Program
         Console.Clear();
         switch (option)
         {
+            case 0:
+                Console.WriteLine("Exiting...");
+                Environment.Exit(0);
+                break;
             case 1:
                 const int target = 752;
                 var twoSum = new TwoSumSolution(target);
                 twoSum.Run();
+                break;
+            case 2:
+                HammingWeightSolutions.Run();
                 break;
             default:
                 Console.WriteLine("Invalid option. Please try again.");
